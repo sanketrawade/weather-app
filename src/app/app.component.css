@@ -1,0 +1,35 @@
+mat-card {
+  width: 900px;
+  height: 100px;
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+button {
+  margin-left: 60px;
+}
+
+img{
+  width: 50px;
+  width: 50px;
+  margin-top: auto;
+  /* margin-left: 900px; */
+}
+
+#card{
+  display: flex;
+}
+
+label{
+  margin-left: 40px;
+  padding-left: 0;
+}
+
+input:text {
+  width: 90%;
+}
+
+form {
+  margin-left: 40px;
+}
