@@ -11,10 +11,17 @@ button {
 }
 
 img{
-  width: 50px;
-  width: 50px;
+  width: 100px;
+  width: 100px;
   margin-top: auto;
+  transition: ease-out;
+  border-radius: 10px 10px 10px 10px;
   /* margin-left: 900px; */
+}
+
+.locationInfo{
+  margin-top: 0;
+  margin-left:200px;
 }
 
 #card{
@@ -24,6 +31,8 @@ img{
 label{
   margin-left: 40px;
   padding-left: 0;
+  font-style: italic;
+  font-family:sans-serif;
 }
 
 input:text {
@@ -33,3 +42,4 @@ input:text {
 form {
   margin-left: 40px;
 }
+

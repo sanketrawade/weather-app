@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'wether-app';
   news = null;
   public isSubmitted = false;
+  isLoader = false;
   cityName = ''
   @ViewChild('Nulles') ElementRef: HTMLInputElement;
   constructor(private weatherService: WeatherService) {
@@ -21,16 +22,19 @@ export class AppComponent implements OnInit {
   }
 
   GetNews(cityName = 'Pune') {
+    this.isLoader = true;
     this.weatherService.GetNews(cityName).subscribe((resp: any) => {
       this.cityName = resp?.location?.name;
       console.log(resp);
       if (resp.error != null) {
+        this.isLoader = false;
         this.news = 'null';
         alert('city name not found.');
       }
       else {
         this.news = resp;
       }
+      this.isLoader = false;
     });
   }
   // tslint:disable-next-line: typedef

@@ -10,17 +10,29 @@
       </mat-form-field>
       <button type="submit" mat-raised-button color="primary">search</button>
     </form>
-
   </mat-card-content>
 </mat-card>
 
 <mat-card *ngIf="news?.error==null" id="card">
   <mat-card-header>
     <img mat-card-image [src]="news?.current?.weather_icons" />
-    </mat-card-header>
+  </mat-card-header>
   <mat-card-title></mat-card-title>
   <mat-card-content>
-  <label *ngIf="news!=null">Temperature :: {{ news?.current?.temperature }}</label>
-  <label *ngIf="news!=null">Celcius :: {{ news?.current?.temperature }}</label>
+ <div class="row">
+  <div class="wetherInfo">
+    <label *ngIf="news!=null">{{ news?.current?.temperature}}&#x2103;</label>
+    <label *ngIf="news!=null">{{ news?.current?.temperature | celcius }}&#x2109;</label>
+  <h3>  <label *ngIf="news!=null"><b>{{ news?.current?.weather_descriptions }}</b></label></h3>
+  </div>
+  <div class="locationInfo">
+    <label for="">{{ news?.location?.name }}</label>
+    <label for="">{{ news?.location?.country }}</label>
+    <label for="">{{ news?.location?.localtime }}</label>
+  </div>
+ </div>
   </mat-card-content>
-  </mat-card>
+</mat-card>
+
+
+<app-loader *ngIf="isLoader"></app-loader>
