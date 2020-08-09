@@ -10,29 +10,52 @@ button {
   margin-left: 60px;
 }
 
-img{
+img {
   width: 100px;
   width: 100px;
   margin-top: auto;
   transition: ease-out;
   border-radius: 10px 10px 10px 10px;
   /* margin-left: 900px; */
+  animation-name: imgAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  transition:linear;
 }
 
-.locationInfo{
+@keyframes imgAnimation {
+  from{
+    margin-top: 0px;
+  }
+  to{
+    margin-top: 120px;
+  }
+}
+
+.locationInfo {
   margin-top: 0;
-  margin-left:200px;
+  margin-left: 200px;
 }
 
-#card{
+#card {
   display: flex;
+  height: 200px;
+  background-color: #74B9FF;
 }
 
-label{
+#card mat-card-header{
+  margin-left: 20px;
+}
+
+#card mat-card-content{
+  margin-left: 200px;
+}
+
+label {
   margin-left: 40px;
   padding-left: 0;
   font-style: italic;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
 
 input:text {
@@ -42,4 +65,3 @@ input:text {
 form {
   margin-left: 40px;
 }
-

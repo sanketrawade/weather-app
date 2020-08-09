@@ -25,10 +25,9 @@ export class AppComponent implements OnInit {
     this.isLoader = true;
     this.weatherService.GetNews(cityName).subscribe((resp: any) => {
       this.cityName = resp?.location?.name;
-      console.log(resp);
-      if (resp.error != null) {
+      if (resp?.success === false) {
         this.isLoader = false;
-        this.news = 'null';
+        this.news = null;
         alert('city name not found.');
       }
       else {

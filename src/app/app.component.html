@@ -8,12 +8,12 @@
         <input [(ngModel)]="cityName" ngModel #city required name="city" matInput placeholder="please enter your city.">
         <mat-error>city is required</mat-error>
       </mat-form-field>
-      <button type="submit" mat-raised-button color="primary">search</button>
+      <button [disabled]="wetherForm.invalid" type="submit" mat-raised-button color="primary">search</button>
     </form>
   </mat-card-content>
 </mat-card>
 
-<mat-card *ngIf="news?.error==null" id="card">
+<mat-card *ngIf="news!=null" id="card">
   <mat-card-header>
     <img mat-card-image [src]="news?.current?.weather_icons" />
   </mat-card-header>
@@ -24,13 +24,13 @@
     <label *ngIf="news!=null">{{ news?.current?.temperature}}&#x2103;</label>
     <label *ngIf="news!=null">{{ news?.current?.temperature | celcius }}&#x2109;</label>
   <h3>  <label *ngIf="news!=null"><b>{{ news?.current?.weather_descriptions }}</b></label></h3>
+  <label *ngIf="news!=null">Wind direction:{{ news?.current?.wind_dir}}</label>
+  <label *ngIf="news!=null">feels like:{{ news?.current?.feelslike}}</label>
   </div>
-  <div class="locationInfo">
     <label for="">{{ news?.location?.name }}</label>
     <label for="">{{ news?.location?.country }}</label>
     <label for="">{{ news?.location?.localtime }}</label>
   </div>
- </div>
   </mat-card-content>
 </mat-card>
 
