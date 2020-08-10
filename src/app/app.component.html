@@ -5,7 +5,7 @@
     <form #wetherForm="ngForm" (ngSubmit)="Search(wetherForm)" class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>City</mat-label>
-        <input [(ngModel)]="cityName" ngModel #city required name="city" matInput placeholder="please enter your city.">
+        <input [(ngModel)]="cityName" ngModel #city required type="search" name="city" matInput placeholder="please enter your city.">
         <mat-error>city is required</mat-error>
       </mat-form-field>
       <button [disabled]="wetherForm.invalid" type="submit" mat-raised-button color="primary">search</button>
