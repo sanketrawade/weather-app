@@ -11,10 +11,10 @@ button {
 }
 
 img {
-  width: 100px;
-  width: 100px;
+  width: 150px;
+  height: 150px;
   margin-top: auto;
-  transition: ease-out;
+  transition:ease-in-out;
   border-radius: 10px 10px 10px 10px;
   /* margin-left: 900px; */
   animation-name: imgAnimation;
@@ -39,7 +39,7 @@ img {
 
 #card {
   display: flex;
-  height: 200px;
+  height: 250px;
   background-color: #74B9FF;
 }
 
