@@ -1,0 +1,88 @@
+mat-card {
+  width: 900px;
+  height: 100px;
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+button {
+  margin-left: 60px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  margin-top: auto;
+  transition: ease-in-out;
+  border-radius: 10px 10px 10px 10px;
+  /* margin-left: 900px; */
+  animation-name: imgAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  transition: linear;
+}
+
+@keyframes imgAnimation {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 120px;
+  }
+}
+
+.locationInfo {
+  margin-top: 0;
+  margin-left: 200px;
+}
+
+#form {
+  background: #acb6e5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #86fde8,
+    #acb6e5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #86fde8,
+    #acb6e5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#card {
+  display: flex;
+  height: 250px;
+  background: #2980b9; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);   */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #6dd5fa,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#card mat-card-header {
+  margin-left: 20px;
+}
+
+#card mat-card-content {
+  margin-left: 200px;
+}
+
+label {
+  margin-left: 40px;
+  padding-left: 0;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+input:text {
+  width: 90%;
+}
+
+form {
+  margin-left: 40px;
+}

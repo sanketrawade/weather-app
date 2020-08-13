@@ -2,37 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { HeaderComponent } from './header/header.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { LoaderComponent } from './loader/loader.component';
 import { CelciusPipe } from './celcius.pipe';
+import { WeatherComponent } from './weather/weather.component';
+import { WeatherFormComponent } from './weather-form/weatherForm.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    LoaderComponent,
-    CelciusPipe
+    CelciusPipe,
+    WeatherComponent,
+    WeatherFormComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    MatCardModule,
-    MatToolbarModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
