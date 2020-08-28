@@ -9,7 +9,7 @@ import { CelciusPipe } from './celcius.pipe';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherFormComponent } from './weather-form/weatherForm.component';
 import { SharedModule } from './shared/shared.module';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    FlexLayoutModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

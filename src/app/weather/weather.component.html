@@ -1,4 +1,4 @@
-<mat-card *ngIf="news!=null" id="card">
+<mat-card fxLayout="row" fxLayoutAlign="center center" *ngIf="news!=null" id="card">
   <mat-card-header>
     <img mat-card-image [src]="news?.current?.weather_icons" />
   </mat-card-header>
@@ -17,5 +17,5 @@
       <label for="">{{ news?.location?.localtime }}</label>
     </div>
   </mat-card-content>
-</mat-card>
 <app-loader *ngIf="isLoader"></app-loader>
+</mat-card>

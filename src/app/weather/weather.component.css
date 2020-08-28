@@ -1,13 +1,18 @@
 mat-card {
-  width: 900px;
-  height: 100px;
+  /* width: 900px;
+  height: 100px; */
   align-items: center;
-  margin-left: 200px;
+  margin-left: auto;
   margin-top: 30px;
+  animation-name: animatewether;
+  /* animation-iteration-count: inherit; */
+  animation-duration: 3s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: ease-in;
 }
 
 button {
-  margin-left: 60px;
+  /* margin-left: 60px; */
 }
 
 img {
@@ -17,7 +22,7 @@ img {
   transition: ease-in-out;
   border-radius: 10px 10px 10px 10px;
   /* margin-left: 900px; */
-  animation-name: imgAnimation;
+  /* animation-name: imgAnimation; */
   animation-iteration-count: infinite;
   animation-duration: 2s;
   transition: linear;
@@ -34,7 +39,7 @@ img {
 
 .locationInfo {
   margin-top: 0;
-  margin-left: 200px;
+  margin-left: auto;
 }
 
 #form {
@@ -65,24 +70,133 @@ img {
 }
 
 #card mat-card-header {
-  margin-left: 20px;
+  margin-left: auto;
 }
 
 #card mat-card-content {
-  margin-left: 200px;
+  margin-left: auto;
 }
 
 label {
-  margin-left: 40px;
+  /* margin-left: 40px; */
   padding-left: 0;
   font-style: italic;
   font-family: sans-serif;
 }
 
-input:text {
-  width: 90%;
+input {
+  width: 70%;
 }
 
 form {
-  margin-left: 40px;
+  /* margin-left: 40px; */
+}
+
+/* @media only screen and (max-width: 800px) {
+  input:text {
+    width: 40%;
+  }
+  mat-card {
+    width: 450px;
+    height: 50px;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 30px;
+  }
+  mat-card mat-card-content {
+    margin-left: 10px;
+  }
+  mat-card mat-card-header {
+    margin-left: 20px;
+  }
+  img {
+    width: 80px;
+    height: 60px;
+  }
+  label {
+    margin-left: 0px;
+    padding-left: 0;
+    font-style: italic;
+    font-family: sans-serif;
+  }
+} */
+
+/* @media screen and (max-width: 400px) {
+  mat-card {
+    width: 450px;
+    height: 50px;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 30px;
+  }
+  mat-card mat-card-content {
+    margin-left: 10px;
+  }
+  mat-card mat-card-header {
+    margin-left: 0px;
+  }
+  img {
+    width: 60px;
+    height: 40px;
+  }
+  label {
+    margin-left: 0px;
+    padding-left: 0;
+    font-style: italic;
+    font-family: sans-serif;
+  } */
+
+  /* #card {
+    background: #aa4b6b; 
+    background: -webkit-linear-gradient(
+      to right,
+      #3b8d99,
+      #6b6b83,
+      #aa4b6b
+    ); 
+    background: linear-gradient(
+      to right,
+      #3b8d99,
+      #6b6b83,
+      #aa4b6b
+    ); 
+  }
+} */
+
+
+@keyframes animatewether{
+  from{
+    transform: translateY(-100px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+
+@media (max-width: 600px) {
+  /* mat-card-content{
+    margin-left: 10px;
+  }
+  mat-card {
+    width: 450px;
+    height: 50px;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 30px;
+  }
+  form {
+    margin-left: 0px;
+  } */
+  img {
+    width: 60px;
+    height: 60px;
+    transition: ease-in-out;
+    border-radius: 10px 10px 10px 10px;
+    /* margin-left: 900px; */
+    /* animation-name: imgAnimation; */
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    transition: linear;
+  }
 }
